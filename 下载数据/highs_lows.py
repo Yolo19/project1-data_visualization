@@ -23,6 +23,7 @@ with open(filename) as f:
 fig = plt.figure(dpi=128, figsize=(10, 6))
 plt.plot(dates, highs, c='red')
 plt.plot(dates, lows, c='blue')
+plt.fill_between(dates, highs, lows, facecolor='blue', alpha=0.1)
 
 # 设置图形格式
 plt.title("Daily high and low temperatures - 2014", fontsize=24)
